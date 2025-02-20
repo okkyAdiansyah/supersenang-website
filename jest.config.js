@@ -159,6 +159,9 @@ const config = {
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
 
+  // Test timeout for race conditions
+  testTimeout: 30000
+
   // Adds a location field to test results
   // testLocationInResults: false,
 
@@ -204,4 +207,4 @@ const config = {
   // watchman: true,
 };
 
-module.exports = config;
+module.exports = createJestConfig(config);
