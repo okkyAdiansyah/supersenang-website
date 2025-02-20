@@ -9,6 +9,7 @@ on:
   pull_request:
     branches:
       - develop
+      - main
 
 jobs:
   lint:
@@ -69,6 +70,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
-        
+
       - name: Build App
         run: npm run build
