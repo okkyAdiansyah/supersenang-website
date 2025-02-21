@@ -10,11 +10,12 @@ const useResponsive = () => {
     };
 
     const getDeviceType = () => {
-        if(typeof window === "undefined") return device.DESKTOP;
-
-        const screenWidth = window.innerWidth;
-        if(screenWidth <= 640) return device.MOBILE;
-        if(screenWidth > 640 && screenWidth < 1024) return device.TABLET;
+        if(typeof window !== "undefined"){
+            const screenWidth = window.innerWidth;
+            if(screenWidth <= 640) return device.MOBILE;
+            if(screenWidth > 640 && screenWidth < 1024) return device.TABLET;
+        }
+        
         return device.DESKTOP;
     }
 

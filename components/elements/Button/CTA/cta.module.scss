@@ -4,8 +4,17 @@
     font-weight: var(--text-bold);
 }
 
-.cta-main--desktop{
-    padding: 1.2rem 2rem;
-    font-size: var(--text-base);
+.cta--main{
+    @media screen and (min-width: 641px) {
+        padding: 1rem 1.8rem;
+        font-size: var(--text-base);
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 1.2rem 2rem;
+        font-size: var(--text-base);
+    }
+    padding: .8rem 1.6rem;
+    font-size: var(--text-sm);
     border-radius: var(--border-radius-lg);
 }

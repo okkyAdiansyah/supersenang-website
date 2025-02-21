@@ -1,9 +1,12 @@
 .container{
+    width: 100dvw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2.4rem;
     background: var(--primary-color);
+    position: fixed;
+    top: 0;
 }
 
 .container-right{
