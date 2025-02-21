@@ -10,8 +10,8 @@ const Logo = ({src, width, height}) => {
             >
                 <Image
                     src={src}
-                    width={width}
-                    height={height}
+                    width={width === undefined ? 46 : width}
+                    height={height === undefined ? 46 : height}
                     alt="supersenang-logo"
                 />
             </Link>

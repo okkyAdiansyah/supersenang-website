@@ -1,0 +1,11 @@
+.container{
+    background: var(--tertier-color);
+    color: var(--text-light);
+    font-weight: var(--text-bold);
+}
+
+.cta-main--desktop{
+    padding: 1.2rem 2rem;
+    font-size: var(--text-base);
+    border-radius: var(--border-radius-lg);
+}
