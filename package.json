@@ -9,12 +9,13 @@
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:action" : "jest --coverage --passWithNoTests"
+    "test:action": "jest --coverage --passWithNoTests"
   },
   "dependencies": {
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sass": "^1.85.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
