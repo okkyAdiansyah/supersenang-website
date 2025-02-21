@@ -42,7 +42,7 @@ const Nav = () => {
                 </section>
                 <section className={styles['container-right']}>
                     {deviceType !== "mobile" ? <NavList navItems={navItems}/> : ""}
-                    <Button.CTA href={"/check-available"} callToAction={"Book Now"} device={deviceType}/>
+                    <Button.CTA href={"/check-available"} callToAction={"Book Now"} />
                     {deviceType === "mobile" ? <MobileNav /> : ""} 
                 </section>
             </nav>
