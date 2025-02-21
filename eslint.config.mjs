@@ -13,6 +13,18 @@ const compat = new FlatCompat({
 const configs = [
   ...compat.extends("next/core-web-vitals"),
   ...compat.extends("next/typescript"),
+  {
+    rules: {
+      "react/display-name": "off",
+    },
+  },
+  {
+    files: ["**/*.test.js", "**/*.test.jsx"],
+    rules: {
+      "react/display-name": "off",
+      "@next/next/no-img-element": "off",
+    },
+  },
 ]
 
 export default configs
