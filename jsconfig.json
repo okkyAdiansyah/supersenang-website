@@ -4,7 +4,10 @@
     "moduleResolution": "bundler",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@blocks/*": ["./components/blocks/*"],
+      "@modules/*": ["components/modules/*"],
+      "@elements/*": ["./components/elements/*"]
     }
   }
 }
