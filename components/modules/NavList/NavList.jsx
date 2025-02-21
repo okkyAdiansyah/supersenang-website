@@ -1,10 +1,11 @@
 import React from "react";
 import NavItem from "@elements/NavItem/NavItem";
+import styles from "./navList.module.scss";
 
 const NavList = ({navItems}) => {
     return(
         <>
-            <ul>
+            <ul className={styles.container}>
                 {navItems.map((item, id) => (
                     <li key={`nav-item-${id}`}>
                         <NavItem href={item.href} route={item.route} />
