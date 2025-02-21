@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { Button } from "@elements/Button";
-import NavList from "@modules/NavList/NavList";
-import Logo from "@elements/Logo/Logo";
+import Logo from "@/components/elements/Logo/Logo";
+import NavList from "@/components/modules/NavList/NavList";
+import CTA from "@/components/elements/Button/CTA/CTA";
+import MobileNav from "@/components/modules/MobileNav/MobileNav";
 import SiteLogo from "@/public/logo.avif";
 import useResponsive from "@/hooks/useResponsive";
-import MobileNav from "@/components/modules/MobileNav/MobileNav";
 import styles from "./nav.module.scss";
 
 const Nav = () => {
@@ -16,7 +16,7 @@ const Nav = () => {
         DESKTOP: 46,
         TABLET: 40,
         MOBILE: 36
-      }
+    }
 
     const navItems = [
         {href: "/about", route: "About"},
@@ -28,6 +28,8 @@ const Nav = () => {
         if(deviceType === "mobile") return dynamicImage.MOBILE;
         if(deviceType === "tablet") return dynamicImage.TABLET;
         if(deviceType === "desktop") return dynamicImage.DESKTOP;
+
+        return dynamicImage.DESKTOP;
       }
 
     return(
@@ -41,9 +43,9 @@ const Nav = () => {
                     />
                 </section>
                 <section className={styles['container-right']}>
-                    {deviceType !== "mobile" ? <NavList navItems={navItems}/> : ""}
-                    <Button.CTA href={"/check-available"} callToAction={"Book Now"} />
-                    {deviceType === "mobile" ? <MobileNav /> : ""} 
+                    {deviceType !== "mobile" && <NavList navItems={navItems}/>}
+                    <CTA href={"/check-available"} callToAction={"Book Now"} />
+                    {deviceType === "mobile" && <MobileNav />} 
                 </section>
             </nav>
         </>
