@@ -1,11 +1,5 @@
-name: Develop Branch CI With Other Sub-Branch
-
+name: Develop CI
 on:
-  push:
-    branches:
-      - 'feat/*'
-      - 'ui/*'
-      - 'hotfix/*'
   pull_request:
     branches:
       - develop
