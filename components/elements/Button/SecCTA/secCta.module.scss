@@ -1,0 +1,24 @@
+.link{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2.4rem;
+    font-size: var(--text-base);
+    color: var(--tertier-color);
+    font-weight: var(--text-bold);
+    border-bottom: 1.5px solid var(--text-dark);
+
+    @media screen and (min-width: 641px) {
+        padding-inline: 2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding-inline: 2.4rem;
+    }
+
+    img{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
