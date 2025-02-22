@@ -1,12 +1,13 @@
 .container{
-    width: 100dvw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.4rem;
+    padding: 1rem 2.4rem;
     background: var(--primary-color);
     position: fixed;
     top: 0;
+    z-index: 9999;
 }
 
 .container-right{

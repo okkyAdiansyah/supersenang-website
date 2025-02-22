@@ -5,6 +5,10 @@
 }
 
 .cta--main{
+    padding: .8rem 1.6rem;
+    font-size: var(--text-sm);
+    border-radius: var(--border-radius-lg);
+    
     @media screen and (min-width: 641px) {
         padding: 1rem 1.8rem;
         font-size: var(--text-base);
@@ -14,7 +18,4 @@
         padding: 1.2rem 2rem;
         font-size: var(--text-base);
     }
-    padding: .8rem 1.6rem;
-    font-size: var(--text-sm);
-    border-radius: var(--border-radius-lg);
 }
