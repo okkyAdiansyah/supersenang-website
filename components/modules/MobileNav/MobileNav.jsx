@@ -8,7 +8,7 @@ import styles from "./mobileNav.module.scss";
 const MobileNav = () => {
     const [isActive, setIsActive] = useState(false);
 
-    const navItems = [
+    const nav = [
         {href: "/about", route: "About"},
         {href: "/rooms", route: "Rooms"},
         {href: "/culinary", route: "Culinary"},
@@ -26,7 +26,7 @@ const MobileNav = () => {
                     onClick={handleToggleClick}
                 />
                 <NavList 
-                    navItems={navItems} 
+                    navItems={nav} 
                     className={`${styles['mobile-nav']} ${isActive ? styles.isActive : ''}`} 
                 />
             </section>
