@@ -2,12 +2,12 @@
 
 import React from "react";
 import Logo from "@/components/elements/Logo/Logo";
-import NavList from "@/components/modules/NavList/NavList";
 import CTA from "@/components/elements/Button/CTA/CTA";
 import MobileNav from "@/components/modules/MobileNav/MobileNav";
 import SiteLogo from "@/public/logo.avif";
 import useResponsive from "@/hooks/useResponsive";
 import styles from "./nav.module.scss";
+import DesktopNav from "@/components/modules/DesktopNav/DesktopNav";
 
 const Nav = () => {
     const deviceType = useResponsive();
@@ -17,12 +17,6 @@ const Nav = () => {
         TABLET: 40,
         MOBILE: 36
     }
-
-    const navItems = [
-        {href: "/about", route: "About"},
-        {href: "/rooms", route: "Rooms"},
-        {href: "/culinary", route: "Culinary"},
-    ]
 
     const generateLogo = () => {
         if(deviceType === "mobile") return dynamicImage.MOBILE;
@@ -43,7 +37,7 @@ const Nav = () => {
                     />
                 </section>
                 <section className={styles['container-right']}>
-                    {deviceType !== "mobile" && <NavList navItems={navItems}/>}
+                    {deviceType !== "mobile" && <DesktopNav />}
                     <CTA href={"/check-available"} callToAction={"Book Now"} />
                     {deviceType === "mobile" && <MobileNav />} 
                 </section>

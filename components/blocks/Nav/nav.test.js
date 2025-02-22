@@ -9,7 +9,7 @@ jest.mock("@/hooks/useResponsive", () => ({
 }));
 
 jest.mock("@elements/Logo/Logo", () => (props) => <img data-testid="logo" alt="" {...props} />);
-jest.mock("@modules/NavList/NavList", () => (props) => <div data-testid="desktop-nav" {...props}></div>);
+jest.mock("@modules/DesktopNav/DesktopNav", () => () => <div data-testid="desktop-nav"></div>);
 jest.mock("@modules/MobileNav/MobileNav", () => () => <div data-testid="mobile-nav"></div>);
 
 describe("<Nav />", () => {
